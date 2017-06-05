@@ -53,6 +53,12 @@ public:
   void Predict();
 
   /**
+   * Common part of update both function.
+   * @param y The matrix y
+   */
+  void BaseUpdate(const Eigen::VectorXd &y);
+
+  /**
    * Updates the state by using standard Kalman Filter equations
    * @param z The measurement at k+1
    */
